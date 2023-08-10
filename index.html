@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pig Game</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Pig Game" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <script
+      src="https://kit.fontawesome.com/f2b7fa994e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="newGame()">
+    <header>
+      <h1 class="turn-display">Player with most point go first</h1>
+    </header>
+    <section class="gamerules hidden">
+      <button class="btn-close"><i class="fa-solid fa-x"></i></button>
+      <p class="gamerules-p">
+        -For the first turn each player takes turn to roll a dice. Player with
+        more points gets to play first!
+        <br >
+      </p>
+      
+      Each turn, a player repeatedly rolls a die until either a 1 is rolled or
+      the player decides to "hold":
+      <ul class="rules">
+        <li>
+          &bull; If the player rolls a 1, they score nothing and it becomes the
+          next player's turn.
+        </li>
+        <li>
+          &bull; If the player rolls any other number, it is added to their turn
+          total and the player's turn continues.
+        </li>
+        <li>
+          &bull; If a player chooses to "hold", their turn total is added to
+          their score, and it becomes the next player's turn.
+        </li>
+      </ul>
+    </section>
+    <div class="overlay hidden"></div>
+
+    <main>
+      <section class="dice-container">
+        <div class="face dice0"></div>
+        <div class="first-face face hidden dice1">
+          <span class="pip"></span>
+        </div>
+        <div class="second-face face hidden dice2">
+          <span class="pip"></span>
+          <span class="pip"></span>
+        </div>
+        <div class="third-face face hidden dice3">
+          <span class="pip"></span>
+          <span class="pip"></span>
+          <span class="pip"></span>
+        </div>
+        <div class="fourth-face face hidden dice4">
+          <div class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+          </div>
+          <div class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+          </div>
+        </div>
+        <div class="fifth-face face hidden dice5">
+          <div class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+          </div>
+          <div class="column">
+            <span class="pip"></span>
+          </div>
+          <div class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+          </div>
+        </div>
+        <div class="sixth-face face hidden dice6">
+          <div class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+          </div>
+          <div class="column">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+          </div>
+        </div>
+      </section>
+      <section class="button">
+        <button class="btn btn-new-game">NEW GAME</button>
+
+        <button class="btn btn-roll-dice">ROLL DICE</button>
+        <button class="btn btn-hold">HOLD</button>
+      </section>
+      <section class="container" id="player1">
+        <ul>
+          <li>Player 1</li>
+          <li class="point">
+            <h1 class="player1-total-point player-total-point">0</h1>
+          </li>
+        </ul>
+        <section class="current-point-container">
+          <ul>
+            <li>CURRENT</li>
+            <li class="player1-current-point">0</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="container" id="player2">
+        <ul>
+          <li>Player 2</li>
+          <li class="point">
+            <h1 class="player2-total-point player-total-point">0</h1>
+          </li>
+        </ul>
+        <section class="current-point-container">
+          <ul>
+            <li>CURRENT</li>
+            <li class="player2-current-point">0</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer class="img-container">
+      <div class="notification">Click Gura to see the rules</div>
+      <img
+        src="/pngaaa.com-6002684.png"
+        alt="Game rules"
+        class="gura-question"
+      />
+      <img
+        src="/hololive-gawr-gura-achieved-four-million-01_auto_x2-removebg-preview.png"
+        alt="Game rules"
+        class="gura-cheers"
+      />
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
