@@ -364,9 +364,7 @@ ul {
     height: 14px;
     width: 14px;
   }
-  .gamerules {
-    width: min(90vw, 800px);
-  }
+  
 
 }
 
@@ -439,13 +437,16 @@ ul {
     width: 6px;
   }
 }
-@media screen and (orientation: landscape) and (min-height: 600px) and (min-width: 800px) {
+@media screen and (orientation: landscape) and (min-height: 550px) and (min-width: 800px) {
   .face {
     padding: 0.3rem;
   }
   .pip {
     height: 7px;
     width: 7px;
+  }
+  .gamerules {
+    width: min(90vw, 800px);
   }
 }
 @media screen and (orientation: landscape) and (min-height: 600px) and (min-width: 1000px) {
