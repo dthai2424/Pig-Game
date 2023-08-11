@@ -446,7 +446,7 @@ ul {
     width: 7px;
   }
   .gamerules {
-    width: min(90vw, 800px);
+    width: min(80vw, 700px);
   }
 }
 @media screen and (orientation: landscape) and (min-height: 600px) and (min-width: 1000px) {
